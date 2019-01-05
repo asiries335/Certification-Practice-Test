@@ -13,6 +13,11 @@ class User {
         $this->password = $password;
     }
 
+    public function __destruct()
+    {
+        echo "{$this->login} - deleted";
+    }
+
     public function showInfo()
     {
         return "name - {$this->name}, login - {$this->login}, password - {$this->password}";
